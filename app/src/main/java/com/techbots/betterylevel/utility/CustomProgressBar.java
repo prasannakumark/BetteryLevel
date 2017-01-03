@@ -1,4 +1,4 @@
-package com.techbots.betterylevel;
+package com.techbots.betterylevel.utility;
 
 /**
  * Created by leela on 30/12/16.

@@ -1,13 +1,14 @@
-package com.techbots.betterylevel;
+package com.techbots.betterylevel.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.techbots.betterylevel.R;
 
 /**
  * Created by leela on 2/1/17.

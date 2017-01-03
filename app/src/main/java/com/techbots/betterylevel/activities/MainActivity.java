@@ -1,4 +1,4 @@
-package com.techbots.betterylevel;
+package com.techbots.betterylevel.activities;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.techbots.betterylevel.R;
 
 public class MainActivity extends AppCompatActivity {
 
