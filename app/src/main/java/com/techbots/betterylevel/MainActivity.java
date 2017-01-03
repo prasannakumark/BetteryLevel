@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         else if(status== BatteryManager.BATTERY_STATUS_FULL)
             Toast.makeText(this,"The battery is full.", Toast.LENGTH_LONG).show();*/
-        finish();
+        //finish();
     }
 
     @Override
