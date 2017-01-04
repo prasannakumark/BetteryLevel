@@ -38,17 +38,29 @@ public class PowerReceiver extends BroadcastReceiver {
             float batteryPct = level / (float) scale;
 
             if (status == BatteryManager.BATTERY_STATUS_CHARGING) {
-                /*SharedPreferences sharedPreferences = Utility.getInstance().getSharedPreference(context);
+                SharedPreferences sharedPreferences = Utility.getInstance().getSharedPreference(context);
                 if (sharedPreferences.contains("1")) {
                     Intent svc = new Intent(context, BackGroundSoundService.class);
-                    svc.putExtra("song_type",sharedPreferences.getString("1", null));
+                    svc.putExtra("song_type", sharedPreferences.getString("1", null));
                     context.startService(svc);
-                } else*/
-                showAlert("The battery is charging.", batteryPct, context);
+                } else
+                    showAlert("we recognised that you could not set any music alter for when connect charg", batteryPct, context);
             } else if (status == BatteryManager.BATTERY_STATUS_DISCHARGING) {
-                showAlert("The battery is discharging.", batteryPct, context);
+                SharedPreferences sharedPreferences = Utility.getInstance().getSharedPreference(context);
+                if (sharedPreferences.contains("2")) {
+                    Intent svc = new Intent(context, BackGroundSoundService.class);
+                    svc.putExtra("song_type", sharedPreferences.getString("2", null));
+                    context.startService(svc);
+                } else
+                    showAlert("The battery is discharging.", batteryPct, context);
             } else if (status == BatteryManager.BATTERY_STATUS_FULL) {
-                showAlert("The battery is full.", batteryPct, context);
+                SharedPreferences sharedPreferences = Utility.getInstance().getSharedPreference(context);
+                if (sharedPreferences.contains("2")) {
+                    Intent svc = new Intent(context, BackGroundSoundService.class);
+                    svc.putExtra("song_type", sharedPreferences.getString("3", null));
+                    context.startService(svc);
+                } else
+                    showAlert("The battery is full.", batteryPct, context);
             }
         } catch (Exception ex) {
             Toast.makeText(context, ex.getMessage(), Toast.LENGTH_LONG).show();

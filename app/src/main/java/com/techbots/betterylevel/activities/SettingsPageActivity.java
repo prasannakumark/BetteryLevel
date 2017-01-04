@@ -29,23 +29,45 @@ import java.io.PrintWriter;
 
 public class SettingsPageActivity extends AppCompatActivity {
 
-    Button button;
+    Button buttonChargeConected,buttonChargeDisconnected,buttonChargeFulled;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
-        button = (Button) findViewById(R.id.select_song);
+        buttonChargeConected = (Button) findViewById(R.id.select_song);
+        buttonChargeDisconnected = (Button) findViewById(R.id.select_song_discharge);
+        buttonChargeFulled = (Button) findViewById(R.id.select_song_charge_full);
 
-        MediaPlayer mp = new MediaPlayer();
-        button.setOnClickListener(new View.OnClickListener() {
+        buttonChargeFulled.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_upload = new Intent();
+                intent_upload.setType("audio/mpeg");
+                intent_upload.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(intent_upload, 3);
+
+            }
+        });
+
+        buttonChargeDisconnected.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_upload = new Intent();
+                intent_upload.setType("audio/mpeg");
+                intent_upload.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(intent_upload, 2);
+
+            }
+        });
+
+        buttonChargeConected.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent_upload = new Intent();
                 intent_upload.setType("audio/mpeg");
                 intent_upload.setAction(Intent.ACTION_GET_CONTENT);
                 startActivityForResult(intent_upload, 1);
-
             }
         });
 

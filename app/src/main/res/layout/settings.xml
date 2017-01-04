@@ -6,9 +6,22 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text= "Select a song"
+        android:text= "Select a song for when connect charg"
         android:textSize="20dp"
         android:id="@+id/select_song"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text= "Select a song for when charger disconnect"
+        android:textSize="20dp"
+        android:id="@+id/select_song_discharge"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text= "Select a song for when charger full"
+        android:textSize="20dp"
+        android:id="@+id/select_song_charge_full"/>
 
 
 

@@ -53,7 +53,6 @@ public class Utility {
         Uri uri = Uri.parse(strUri);
         stopSong();
         mediaPlayer = MediaPlayer.create(context, uri);
-        mediaPlayer.setLooping(true);
         mediaPlayer.start();
         return mediaPlayer;
     }

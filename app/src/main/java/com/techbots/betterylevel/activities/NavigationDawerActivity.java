@@ -1,14 +1,19 @@
 package com.techbots.betterylevel.activities;
 
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.graphics.PixelFormat;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.techbots.betterylevel.R;
+import com.techbots.betterylevel.services.PowerReceiver;
 
 /**
  * Created by leela on 2/1/17.
@@ -39,8 +44,6 @@ public class NavigationDawerActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
 }
 
