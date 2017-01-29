@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -30,11 +31,15 @@ import java.io.PrintWriter;
 public class SettingsPageActivity extends AppCompatActivity {
 
     Button buttonChargeConected,buttonChargeDisconnected,buttonChargeFulled;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitleTextColor(0xFFFFFFFF);
+        toolbar.setTitle("BatteryLevel");
         buttonChargeConected = (Button) findViewById(R.id.select_song);
         buttonChargeDisconnected = (Button) findViewById(R.id.select_song_discharge);
         buttonChargeFulled = (Button) findViewById(R.id.select_song_charge_full);
